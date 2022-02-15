@@ -87,6 +87,7 @@ The configuration file must be named ".multilinterrc.json" or ".multilinterrc", 
 Usually You can place it in %USERPROFILE%, which is last resort to find it.
 
 #### Notes on real time linting enabled
+
 You can use npm global installed linters or local installed linters. If you are using a local installed linter and "Real Time" linting is enabled in VisualStudio preferences page, MultiLinter will use stdin to send data to the linter if it supports stdin input. In case linter does not support stdin usage MultiLinter will create a shadow file named [fileName].multilinter.[fileExtension] in same directory of the original file every time it needs to lint the document you're editing. The shadow file will be deleted as soon as linting is done. The shadow file can appear for a moment in Visual Studio Explorer. To avoid these files to be shown in Visual Studio Explorer add these lines to your project file (.csproj):
 
 ```xml
@@ -103,6 +104,8 @@ Linters who support stdin input are: **eslint** and **stylelint**. So, if you ar
 #### Notes on formatters
 
 MultiLinter needs to format a file within the editor, so formatters must support stdin/stdout to be formatted. Integrated formatters are Prettier and Beautify. They support stdin/stdout.
+
+
 
 #### Advanced
 You can modify behaviour of MultiLinter, enable or disable preconfigured linters or add new ones by changing its json configuration.
